@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surveys",
+  "info": {
+    "name": "survey",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "json": {
+      "type": "json",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "isOnline",
+        "isArchive",
+        "isNotOnline"
+      ],
+      "required": true,
+      "default": "isNotOnline"
+    },
+    "results": {
+      "collection": "result",
+      "via": "surveyId"
+    }
+  }
+}
