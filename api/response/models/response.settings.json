@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "datas",
+  "collectionName": "responses",
   "info": {
-    "name": "data",
-    "description": ""
+    "name": "response"
   },
   "options": {
     "increments": true,
@@ -12,15 +11,13 @@
   },
   "attributes": {
     "question": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "answer": {
+      "type": "json"
     },
     "surveyId": {
       "model": "survey"
-    },
-    "answer": {
-      "type": "json",
-      "required": false
     }
   }
 }
