@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
       settings: {
         // client: 'sqlite',
         // filename: env('DATABASE_FILENAME', '.tmp/data.db'),
-        client: 'sql',
+        client: 'mysql',
         host: "${process.env.HOST}",
         port: "${process.env.PORT}",
         database: "${process.env.DATABASE}",
